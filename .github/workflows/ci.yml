@@ -24,7 +24,7 @@ jobs:
           - 6379:6379
     steps:
       - uses: actions/checkout@v2
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: actions-rs/toolchain@v1.0.7
         with:
           toolchain: stable
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: actions-rs/toolchain@v1.0.7
         with:
           toolchain: nightly
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Swatinem/rust-cache@v1
+      - uses: Swatinem/rust-cache@v2
       - uses: fusion-engineering/setup-git-credentials@v2
         with:
           credentials: ${{ secrets.GITHUB_TOKEN }}
